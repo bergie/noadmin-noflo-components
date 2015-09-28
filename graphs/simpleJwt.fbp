@@ -1,0 +1,27 @@
+# Adding the app server
+'1880' -> PORT Server(xpress/Server)
+Server APP -> APP Auth(xpress/PathRouter)
+
+# Static routing
+'/auth' -> PATH Private
+'get /auth' -> PATTERN[0] Auth
+'post /auth' -> PATTERN[1] Auth
+
+'sssshhhh' -> SECRET JwtSign(noadmin/JwtSign)
+'sssshhhh' -> SECRET JwtVerify(noadmin/JwtVerify)
+
+'req.headers.username' -> KEY GetUn(objects/ExtractProperty)
+'req.headers.password' -> KEY GetPwd(objects/ExtractProperty)
+
+Auth REQ[0] -> REQ XHello(xpress/TestHello)
+Auth REQ[1] -> IN Split(core/Split)
+Split OUT -> IN GetUn
+Split OUT -> IN GetPwd
+
+GetUn OUT -> USERNAME PamAuth(noadmin/PamAuth)
+GetPwd OUT -> PASSWORD PamAuth
+
+PamAuth OUT -> Log(core/Output)
+PamAuth ERROR -> Log(core/Output)
+
+

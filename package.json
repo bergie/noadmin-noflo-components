@@ -1,0 +1,33 @@
+{
+  "name": "noadmin",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zeb Sampedro, Saurabh Sood",
+  "license": "AGPLv3",
+  "dependencies": {
+    "noflo": "~0.5.13",
+    "noflo-filesystem": "~1.0.6",
+    "noflo-core": "~0.1.14",
+    "noflo-nodejs": "~0.5.2",
+    "noflo-xpress": "~0.2.0",
+    "jsonwebtoken": "~5.0.5",
+    "authenticate-pam": "~0.2.2",
+    "nan": "1.8.4",
+    "noflo-objects": "~0.1.12"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-noflo-manifest": "~0.1.11"
+  },
+  "noflo": {
+    "components": {
+      "JwtVerify": "components/jwt/JwtVerify.coffee",
+      "JwtSign": "components/jwt/JwtSign.coffee",
+      "PamAuth": "components/pam/PamAuth.coffee"
+    }
+  }
+}
