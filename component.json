@@ -1,0 +1,22 @@
+{
+  "name": "NoAdmin-NoFlo-Components",
+  "description": "NoFlo components for the NoAdmin Portal",
+  "author": "Saurabh Sood <saurabh.sood@colorado.edu>",
+  "repo": "ResearchComputing/noadmin-noflo-components",
+  "version": "0.0.1",
+  "dependencies": {
+    "noflo/noflo": "*",
+    "noflo/noflo-websocket": "*",
+    "noflo/noflo-strings": "*",
+    "noflo/noflo-objects": "*",
+    "noflo/noflo-core": "*"
+  },
+  "noflo": {
+    "components": {
+      "MongoBase": "components/mongo/MongoBase.coffee",
+    }
+  },
+  "scripts": [
+    "MongoBase.js",
+  ]
+}
