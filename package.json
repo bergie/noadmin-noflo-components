@@ -22,7 +22,7 @@
   "noflo": {
       "icon": "beer",
       "components": {
-        "MongoBase": "components/mongo/MongoBase.coffee",
+        "MongoBase": "components/mongo/MongoBase.coffee"
       }
   },
 }
